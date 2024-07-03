@@ -14,6 +14,9 @@ export default {
                 inactive: "#82827D",
                 sidebar: "#1A1A19",
             },
+            fontFamily: {
+                lato: ["Lato"],
+            },
         },
     },
     plugins: [],
