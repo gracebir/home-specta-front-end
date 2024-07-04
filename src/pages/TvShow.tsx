@@ -34,13 +34,13 @@ function TvShow() {
         draggable: true,
     };
     return (
-        <div className='grid grid-cols-12 max-w-[1391px] mx-auto min-h-screen'>
-            <div className='col-span-9 px-6'>
+        <div className='grid lg:grid-cols-12 grid-cols-1 max-w-[1391px] mx-auto min-h-screen'>
+            <div className='lg:col-span-9 col-span-1 px-6'>
                 <Header isHome={true} />
                 <Banner />
                 <section>
                     <div className='flex gap-5 py-5 items-center'>
-                        <h1 className='text-3xl font-bold'>
+                        <h1 className='lg:text-3xl text-2xl font-bold'>
                             Popular on Spectra
                         </h1>
                         <div className='flex cursor-pointer items-center'>
@@ -48,7 +48,7 @@ function TvShow() {
                             <MdOutlineKeyboardArrowRight size={20} />
                         </div>
                     </div>
-                    <div className='grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4'>
+                    <div className='grid grid-cols-1 justify-items-center gap-4 md:grid-cols-3 lg:grid-cols-4'>
                         {shows.slice(0, 4).map((item) => (
                             <Card
                                 key={item.id}
@@ -63,7 +63,7 @@ function TvShow() {
                 </section>
                 <section>
                     <div className='flex gap-5 py-5 items-center'>
-                        <h1 className='text-3xl font-bold'>
+                        <h1 className='lg:text-3xl text-2xl font-bold'>
                             Suggested for You
                         </h1>
                         <div className='flex cursor-pointer items-center'>
@@ -71,7 +71,7 @@ function TvShow() {
                             <MdOutlineKeyboardArrowRight size={20} />
                         </div>
                     </div>
-                    <div className='grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4'>
+                    <div className='grid grid-cols-1 justify-items-center gap-4 md:grid-cols-3 lg:grid-cols-4'>
                         {shows.slice(4, 8).map((item) => (
                             <Card
                                 key={item.id}
