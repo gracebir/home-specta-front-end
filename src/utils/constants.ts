@@ -26,6 +26,26 @@ import fanta from "../assets/genres/fanta.png";
 import crime from "../assets/genres/crime.png";
 import site from "../assets/genres/sitcon.png";
 
+// logos
+import netflix from "../assets/logos/netflix.png";
+import hulu from "../assets/logos/hulu.png";
+import hbo from "../assets/logos/hbo.png";
+import disney from "../assets/logos/disney.png";
+import amozon from "../assets/logos/amazon.png";
+import apple from "../assets/logos/apple.png";
+
+// discover
+import sexed from "../assets/discorver/sex-education.png";
+import beef from "../assets/discorver/beef.png";
+import dont from "../assets/discorver/dont.png";
+import murder from "../assets/discorver/murder.png";
+import emily from "../assets/discorver/sex-education.png";
+import end from "../assets/discorver/theend.png";
+import imok from "../assets/discorver/imok.png";
+import orange from "../assets/discorver/orange.png";
+import rick from "../assets/discorver/ricky.png";
+import ali from "../assets/discorver/ali-wrong.png";
+
 export const navItems = [
     { id: 1, text: "TV Shows", href: "/" },
     { id: 2, text: "Discover", href: "/discover" },
@@ -219,4 +239,114 @@ export const categories = [
     "Sci Fi",
     "True Crime",
     "Detective",
+];
+
+export const logos = [
+    {
+        id: 1,
+        imgURl: netflix,
+    },
+    {
+        id: 2,
+        imgURl: hbo,
+    },
+    {
+        id: 3,
+        imgURl: disney,
+    },
+    {
+        id: 4,
+        imgURl: amozon,
+    },
+    {
+        id: 5,
+        imgURl: apple,
+    },
+    {
+        id: 6,
+        imgURl: hulu,
+    },
+];
+
+export const discovers = [
+    {
+        id: 1,
+        starsNumber: 4,
+        title: "Sex Education",
+        category: "Comedy, Teen",
+        episode: "24 Ep",
+        imageURL: sexed,
+    },
+    {
+        id: 2,
+        starsNumber: 5,
+        title: "Beef",
+        category: "Drama, Comedy",
+        episode: "10 Ep",
+        imageURL: beef,
+    },
+    {
+        id: 3,
+        starsNumber: 4,
+        title: "Don't Look Up",
+        category: "Comedy, Thriller",
+        episode: "",
+        imageURL: dont,
+    },
+    {
+        id: 4,
+        starsNumber: 4,
+        title: "Murder Mystery",
+        category: "Comedy, Action",
+        episode: "",
+        imageURL: murder,
+    },
+    {
+        id: 5,
+        starsNumber: 5,
+        title: "Emily in Paris",
+        category: "Comedy",
+        episode: "32 Ep",
+        imageURL: emily,
+    },
+    {
+        id: 6,
+        starsNumber: 4,
+        title: "The end of the F* world",
+        category: "Drama, Comedy",
+        episode: "26 Ep",
+        imageURL: end,
+    },
+    {
+        id: 7,
+        starsNumber: 4,
+        title: "I am not OK with it",
+        category: "Teen, Comedy",
+        episode: "21 Ep",
+        imageURL: imok,
+    },
+    {
+        id: 8,
+        starsNumber: 5,
+        title: "Orange is the New Black",
+        category: "Dark Comedy",
+        episode: "72 Ep",
+        imageURL: orange,
+    },
+    {
+        id: 9,
+        starsNumber: 5,
+        title: "Ricky Gervais: Supernature",
+        category: "Stand Up",
+        episode: "",
+        imageURL: rick,
+    },
+    {
+        id: 10,
+        starsNumber: 5,
+        title: "Ali Wong: Baby Cobra",
+        category: "Stand Up",
+        episode: "",
+        imageURL: ali,
+    },
 ];
