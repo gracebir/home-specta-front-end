@@ -6,13 +6,16 @@ import { navItems } from "../../utils/constants";
 import profile from "../../assets/profile.png";
 import circle from "../../assets/squircle.svg";
 import { CiBellOn } from "react-icons/ci";
+import { MdMenu } from "react-icons/md";
+import { useState } from "react";
 
 function Header({ isHome = false }: { isHome: boolean }) {
+    const [show, setShow] = useState(false);
     return (
-        <header className='w-full flex justify-between py-8 items-center'>
-            <Link className='flex gap-5' to={"/"}>
-                <img className='h-8 w-8' src={logo} alt='logo' />
-                <h1 className='text-3xl font-[900] uppercase tracking-[12px] leading-8'>
+        <header className='w-full flex justify-between py-8 items-center relative'>
+            <Link className='flex gap-5 items-center' to={"/"}>
+                <img className='lg:h-8 lg:w-8 h-6 w-6' src={logo} alt='logo' />
+                <h1 className='lg:text-3xl text-2xl font-[900] uppercase tracking-[12px] leading-8'>
                     Spectra
                 </h1>
             </Link>
@@ -56,6 +59,36 @@ function Header({ isHome = false }: { isHome: boolean }) {
                     </div>
                 )}
             </div>
+            <button
+                onClick={() => setShow(!show)}
+                className='text-secondary block lg:hidden'
+            >
+                <MdMenu size={28} />
+            </button>
+            {show && (
+                <nav className='flex flex-col fixed top-24 py-4 right-0 left-0 bg-primary z-40 px-6 items-center  lg:hidden'>
+                    <Link
+                        className='pb-4 text-2xl font-semibold duration-300 border-primary border-b-4 hover:text-active hover:border-active'
+                        to={""}
+                    >
+                        Movies
+                    </Link>
+                    {navItems.map((item) => (
+                        <NavLink
+                            className={({ isActive }) =>
+                                `pb-4 text-2xl font-semibold duration-300 border-primary border-b-4 hover:text-active hover:border-active ${
+                                    isActive && `text-active border-active`
+                                }`
+                            }
+                            // className=''
+                            key={item.id}
+                            to={item.href}
+                        >
+                            {item.text}
+                        </NavLink>
+                    ))}
+                </nav>
+            )}
         </header>
     );
 }
