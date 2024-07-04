@@ -2,6 +2,9 @@
 
 Spectra Movie is a streaming video website built with modern web technologies.
 
+![Screenshot from 2024-07-04 23-05-33](https://github.com/gracebir/home-specta-front-end/assets/46535846/d86747f5-e144-4f26-8a3d-494c9d5be8a8)
+
+
 ## Technologies Used
 
 - React
